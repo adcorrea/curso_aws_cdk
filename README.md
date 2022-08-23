@@ -16,3 +16,33 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
  * `cdk docs`        open CDK documentation
 
 Enjoy!
+
+
+--lista stacks
+Cdk list
+
+-- configura conta aws
+Cdk configure
+
+
+-- implanta as stacks
+Cdk deploy stack1 stack2 
+
+-- destroy as stacks
+Cdk destroy stack1 stack2
+
+-- deploy Rds
+cdk deploy --all --parameters Rds:databasePassword=matilde123456
+
+-- cria docker que emula serviços AWS
+docker run --rm -p 4566:4566 -p 4571:4571 localstack/localstack -e "SERVICES=sns,sqs,dynamodb,s3"
+
+
+-- Emula serviços AWS
+https://github.com/localstack/localstack
+
+
+-- Rodar local
+-- Em enviroment variables
+spring.profiles.active=local
+
